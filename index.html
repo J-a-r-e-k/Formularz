@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularz</title>
+    <link rel="stylesheet" href="css/multiForm.css" />
+  </head>
+  <body>
+    <div class="window">
+      <div class="navigation">
+        <nav>
+          <ul>
+            <li class="navigation__step">
+              <p class="navigation__number navigation--active">1</p>
+              <div>
+                <p>STEP 1</p>
+                <h2>YOUR INFO</h2>
+              </div>
+            </li>
+            <li class="navigation__step">
+              <p class="navigation__number">2</p>
+              <div>
+                <p>STEP 2</p>
+                <h2>SELECT PLAN</h2>
+              </div>
+            </li>
+            <li class="navigation__step">
+              <p class="navigation__number">3</p>
+              <div>
+                <p>STEP 3</p>
+                <h2>ADD-ONS</h2>
+              </div>
+            </li>
+            <li class="navigation__step">
+              <p class="navigation__number">4</p>
+              <div>
+                <p class="navigation__setap">STEP 4</p>
+                <h2 class="navigation__title">SUMMARY</h2>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="form">
+        <form action="">
+          <div class="form__plate yourInfo">
+            <h1 class="form__title">Personal info</h1>
+            <p class="form__info">
+              Please provide your name, email address, and phone number.
+            </p>
+            <section class="form__section yourInfo__data">
+              <label class="yourInfo__text">Name</label
+              ><input
+                type="text"
+                name="name"
+                placeholder=" e.g. Stephen King"
+                required
+              />
+              <label class="yourInfo__text">Email Address</label
+              ><input
+                type="email"
+                name="Email address"
+                placeholder=" e.g. stephenking@lorem.com"
+                required
+              />
+              <label class="yourInfo__text">Phone Number</label
+              ><input
+                type="telephone"
+                name="nrPhone"
+                placeholder=" e.g. +1 234 567 890 "
+                required
+              />
+            </section>
+          </div>
+          <div class="form__plate selectPlate">
+            <h1 class="form__title">Select your plan</h1>
+            <p class="form__info">
+              You have the option of monthly or yearly billing.
+            </p>
+            <section class="form__section form__section--plan">
+              <div class="selectPlate__plan selectPlate__active">
+                <!-- <input type="radio" name="plan" value="arcade" checked /> -->
+                <img src="images/icon-arcade.svg" alt="planBasic" />
+                <span>
+                  <h2 class="form__plan">Arcade</h2>
+                  <p>$9/mo</p>
+                </span>
+              </div>
+              <div class="selectPlate__plan">
+                <!-- <input type="radio" name="plan" value="Advanced" /> -->
+                <img src="images/icon-advanced.svg" alt="planBasic" />
+                <span>
+                  <h2 class="form__plan">Advanced</h2>
+                  <p>$12/mo</p></span
+                >
+              </div>
+              <div class="selectPlate__plan">
+                <!-- <input type="radio" name="plan" value="pro" /> -->
+                <img src="images/icon-pro.svg" alt="planBasic" />
+                <span>
+                  <h2 class="form__plan">Pro</h2>
+                  <p>$15/mo</p></span
+                >
+              </div>
+
+              <label class="selectPlate__toggle">
+                <input type="checkbox" />
+                <p class="toggle__option toggle__option--active">Monthly</p>
+                <span class="toggle__swich"></span>
+                <p class="toggle__option">Yeart</p>
+              </label>
+            </section>
+          </div>
+          <div class="form__plate addOns">
+            <h1 class="form__title">Pick add-ons</h1>
+            <p class="form__info">
+              Add-ons help enhance your gaming experience.
+            </p>
+            <section class="form__section">
+              <label class="addOns__pick addOns__pick--active">
+                <input type="checkbox" checked />
+                <div>
+                  <h2 class="addOns__option">Online service</h2>
+                  <p class="addOns__description">Access to multiplayer games</p>
+                </div>
+                <h3 class="addOns__price">+$1/mo</h3>
+              </label>
+              <label class="addOns__pick addOns__pick--active">
+                <input type="checkbox" checked />
+                <div>
+                  <h2 class="addOns__option">Larger storage</h2>
+                  <p class="addOns__description">Extra 1TB of cloud save</p>
+                </div>
+                <h3 class="addOns__price">+$2/mo</h3>
+              </label>
+              <label class="addOns__pick">
+                <input type="checkbox" />
+                <div>
+                  <h2 class="addOns__option">Customizable Profile</h2>
+                  <p class="addOns__description">
+                    Custom theme on your profile
+                  </p>
+                </div>
+                <h3 class="addOns__price">+$2/mo</h3>
+              </label>
+            </section>
+          </div>
+          <div class="form__plate summary">
+            <h1 class="form__title">Finishing up</h1>
+            <p class="form__info">
+              Double-check everything looks OK before confirming.
+            </p>
+            <section class="form__section finishing">
+              <section class="summary__pick">
+                <div class="summary__up summary__up--plan">
+                  <div>
+                    <h2 class="">Arcade (<span>Monthly</span>)</h2>
+                    <p class="summary__description summary__change">Change</p>
+                  </div>
+                  <h3 class="summary__sum summary__sum--selectPlate">$9/mo</h3>
+                </div>
+                <div class="summary__up">
+                  <div>
+                    <p class="summary__description">Online service</p>
+                    <h3 class="summary__sum">+$1/mo</h3>
+                  </div>
+                  <div>
+                    <p class="summary__description">Larger storage</p>
+                    <h3 class="summary__sum">+$2/mo</h3>
+                  </div>
+                </div>
+              </section>
+
+              <div class="summary__up summary__up--total">
+                <p class="summary__description">Total(<span>per year</span>)</p>
+                <h3 class="summary__sum summary__sum--total">$12/mo</h3>
+              </div>
+            </section>
+          </div>
+          <button class="form__btn form__btn--submin">Next Step</button>
+        </form>
+
+        <button class="form__btn form__btn--back">Go Back</button>
+        <button class="form__btn form__btn--next">Next Step</button>
+
+        <div class="end form__plate">
+          <img src="images/icon-thank-you.svg" alt="success" />
+          <h1 class="end__title">Thank you!</h1>
+          <p class="end__info">
+            Thanks for confirming your subscription! We hope you have fun using
+            our platform. If you ever need support, please feel free to email us
+            at support@loremgaming.com.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

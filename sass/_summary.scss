@@ -1,0 +1,67 @@
+.summary__pick {
+  margin-top: 5%;
+  background-color: #f8f9fe;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.summary__up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  height: 50%;
+  position: relative;
+  div {
+    position: relative;
+    h2 {
+      font-size: 1.8rem;
+      line-height: 2rem;
+      color: #022a61;
+    }
+  }
+}
+.summary__up--plan {
+  border-bottom: 1px solid #999;
+}
+
+.summary__up--total {
+  margin: 4% auto;
+  height: 35px;
+}
+.summary__description {
+  font-size: 1.6rem;
+  color: #999;
+  line-height: 3rem;
+}
+.summary__change {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.summary__change:hover {
+  color: #5047fa;
+}
+
+.summary__sum {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: #022a61;
+}
+.summary__sum--selectPlate {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.summary__sum--total {
+  font-size: 2.2rem;
+  color: #5047fa;
+  font-weight: bold;
+}
+// .form__btn--submin {
+//   display: block;
+// }

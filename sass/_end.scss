@@ -1,0 +1,21 @@
+.end {
+  padding: 20% 0;
+  text-align: center;
+  img {
+    padding-bottom: 1%;
+  }
+  h1 {
+    margin: 3% 0;
+    font-size: 3rem;
+    color: #022a61;
+  }
+  p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    padding: 0 23px;
+    color: #999;
+  }
+  @media (max-width: 950px) and (orientation: landscape) {
+    padding: 5% 0;
+  }
+}

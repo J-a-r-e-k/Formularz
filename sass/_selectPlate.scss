@@ -1,0 +1,122 @@
+.form__section--plan {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: start;
+  justify-content: space-around;
+  @media (max-width: 850px) and (orientation: portrait) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+.selectPlate__plan {
+  position: relative;
+  margin-top: 5%;
+  width: 25%;
+  height: 160px;
+  border: solid 1px #999;
+  border-radius: 10px;
+  cursor: pointer;
+  img {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    @media (max-width: 850px) and (orientation: portrait) {
+      position: static;
+      padding-right: 20px;
+    }
+  }
+  span {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    @media (max-width: 850px) and (orientation: portrait) {
+      position: static;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      color: #022a61;
+    }
+    p {
+      font-size: 1.4em;
+      color: #999;
+      padding-top: 5px;
+    }
+  }
+  @media (max-width: 850px) and (orientation: portrait) {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 950px) and (orientation: landscape) {
+    margin: 2%;
+    height: 70%;
+    max-height: 160px;
+  }
+}
+.selectPlate__plan:hover {
+  border-color: #022a61;
+}
+
+.selectPlate__active {
+  background-color: #f8f9fe;
+  border-color: #022a61;
+}
+
+.selectPlate__toggle {
+  margin-top: 3%;
+  background-color: #f8f9fe;
+  width: 90%;
+  padding: 3% 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 850px) and (orientation: portrait) {
+    width: 100%;
+  }
+  @media (max-width: 950px) and (orientation: landscape) {
+    margin: 0%;
+  }
+
+  input {
+    display: none;
+  }
+  span {
+    position: relative;
+    margin: 0 0;
+    display: block;
+    width: 50px;
+    height: 20px;
+    background-color: #022a61;
+    border-radius: 90px;
+  }
+  span::before {
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  input:checked ~ span::before {
+    left: 30px;
+  }
+}
+.toggle__option {
+  margin: 0 5%;
+  text-align: center;
+  display: block;
+  font-size: 1.6em;
+  color: #999;
+}
+.toggle__option--active {
+  border-color: #022a61;
+}

@@ -1,0 +1,106 @@
+.navigation {
+  position: relative;
+  flex-basis: 35%;
+  height: 100%;
+  overflow: hidden;
+  @media (max-width: 950px) and (orientation: landscape) {
+    flex-basis: 23%;
+  }
+
+  nav {
+    width: 100%;
+    height: 100%;
+    ul {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      height: 95%;
+      width: 80%;
+      border-radius: 10px;
+      background: no-repeat url(../images/bg-sidebar-desktop.svg);
+      background-size: cover;
+      padding: 10% 10%;
+      @media (max-width: 850px) and (orientation: portrait) {
+        position: static;
+        width: 100%;
+        height: 100%;
+        transform: none;
+        border-radius: 0;
+        background-position-y: 85%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+      @media (max-width: 850px) and (orientation: portrait) {
+        width: 100%;
+      }
+      @media (max-width: 950px) and (orientation: landscape) {
+        left: -5px;
+        height: 100%;
+        width: 105%;
+        border-radius: 0;
+      }
+    }
+  }
+  @media (max-width: 850px) and (orientation: portrait) {
+    flex-basis: 35%;
+  }
+}
+.navigation__step {
+  display: flex;
+  margin-top: 10%;
+  padding: 5px;
+
+  div {
+    margin: 0 auto;
+    width: 60%;
+    p {
+      font-size: 1.1em;
+      color: #aaa;
+      font-weight: 100;
+    }
+    h2 {
+      font-size: 1.4em;
+      color: #fff;
+      line-height: 30px;
+    }
+
+    @media (max-width: 950px) {
+      display: none;
+    }
+  }
+  @media (max-width: 850px) and (orientation: portrait) {
+    margin: 3% 3% 0 0;
+    align-items: center;
+    height: 35%;
+  }
+  @media (max-width: 950px) and (orientation: landscape) {
+    justify-content: center;
+  }
+}
+.navigation__number {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: solid 1px whitesmoke;
+  border-radius: 90px;
+  line-height: 2em;
+  font-size: 1.8em;
+  color: white;
+  @media (max-width: 850px) and (orientation: portrait) {
+    width: 6vh;
+    height: 6vh;
+    font-size: 3vh;
+  }
+  @media (max-width: 950px) and (orientation: landscape) {
+    width: 6vw;
+    height: 6vw;
+    font-size: 3vw;
+  }
+}
+.navigation--active {
+  background-color: #c0e2ff;
+  border-color: #c0e2ff;
+  color: #000;
+}
