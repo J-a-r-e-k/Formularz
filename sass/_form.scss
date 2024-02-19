@@ -63,6 +63,7 @@
   color: #999;
 }
 .form__btn {
+  display: none;
   position: absolute;
   bottom: 5%;
   right: 10%;
@@ -83,13 +84,13 @@
 }
 
 .form__btn--back {
-  display: none;
+  // display: none;
   left: 10%;
   width: 70px;
   color: #999;
   background-color: white;
   border: none;
 }
-.form__btn--submin {
-  display: none;
-}
+// .form__btn--submin {
+//   display: none;
+// }

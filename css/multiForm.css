@@ -303,6 +303,7 @@ body {
 }
 
 .form__btn {
+  display: none;
   position: absolute;
   bottom: 5%;
   right: 10%;
@@ -327,16 +328,11 @@ body {
 }
 
 .form__btn--back {
-  display: none;
   left: 10%;
   width: 70px;
   color: #999;
   background-color: white;
   border: none;
-}
-
-.form__btn--submin {
-  display: none;
 }
 
 .yourInfo__data input {
