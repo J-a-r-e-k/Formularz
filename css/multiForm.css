@@ -509,9 +509,6 @@ body {
   transition: 0.4s;
   border-radius: 50%;
 }
-.selectPlate__toggle input:checked ~ span::before {
-  left: 30px;
-}
 
 .selectPlate__toggle--active span::before {
   left: 30px;
