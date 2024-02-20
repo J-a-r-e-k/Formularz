@@ -513,6 +513,10 @@ body {
   left: 30px;
 }
 
+.selectPlate__toggle--active span::before {
+  left: 30px;
+}
+
 .toggle__option {
   margin: 0 5%;
   text-align: center;
@@ -522,7 +526,7 @@ body {
 }
 
 .toggle__option--active {
-  border-color: #022a61;
+  color: #022a61;
 }
 
 .addOns__pick {

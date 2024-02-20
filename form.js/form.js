@@ -28,7 +28,6 @@ const btn = () => {
   arrayNumber[numberStep].classList.add('navigation--active');
 };
 btn();
-
 const next = (e) => {
   e.preventDefault();
   requier.forEach((e) => (e.textContent = ''));
@@ -42,7 +41,6 @@ const next = (e) => {
 
   const personInfo = inputValue.every((e) => e.value.trim() !== '');
   if (!personInfo) {
-    // requier.forEach((e) => (e.textContent = 'This field is required'));
     return;
   }
 
