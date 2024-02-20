@@ -50,27 +50,36 @@
               Please provide your name, email address, and phone number.
             </p>
             <section class="form__section yourInfo__data">
-              <label class="yourInfo__text">Name</label
-              ><input
-                type="text"
-                name="name"
-                placeholder=" e.g. Stephen King"
-                required
-              />
-              <label class="yourInfo__text">Email Address</label
-              ><input
-                type="email"
-                name="Email address"
-                placeholder=" e.g. stephenking@lorem.com"
-                required
-              />
-              <label class="yourInfo__text">Phone Number</label
-              ><input
-                type="telephone"
-                name="nrPhone"
-                placeholder=" e.g. +1 234 567 890 "
-                required
-              />
+              <div>
+                <p class="yourInfo__requier"></p>
+                <label class="yourInfo__text">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder=" e.g. Stephen King"
+                  required
+                />
+              </div>
+              <div>
+                <p class="yourInfo__requier"></p>
+                <label class="yourInfo__text">Email Address</label
+                ><input
+                  type="email"
+                  name="Email address"
+                  placeholder=" e.g. stephenking@lorem.com"
+                  required
+                />
+              </div>
+              <div>
+                <p class="yourInfo__requier"></p>
+                <label class="yourInfo__text">Phone Number</label
+                ><input
+                  type="telephone"
+                  name="nrPhone"
+                  placeholder=" e.g. +1 234 567 890 "
+                  required
+                />
+              </div>
             </section>
           </div>
           <div class="form__plate selectPlate">
@@ -178,11 +187,10 @@
               </div>
             </section>
           </div>
-          <button class="form__btn form__btn--submin">Confirm</button>
+          <button class="form__btn form__btn--back">Go Back</button>
+          <button class="form__btn form__btn--next">Next Step</button>
+          <!-- <button class="form__btn form__btn--submin">Confirm</button> -->
         </form>
-
-        <button class="form__btn form__btn--back">Go Back</button>
-        <button class="form__btn form__btn--next">Next Step</button>
 
         <div class="end form__plate">
           <img src="images/icon-thank-you.svg" alt="success" />

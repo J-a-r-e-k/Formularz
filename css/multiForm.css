@@ -335,6 +335,10 @@ body {
   border: none;
 }
 
+.yourInfo__data div {
+  position: relative;
+  margin-top: 5%;
+}
 .yourInfo__data input {
   width: 100%;
   margin-top: 5px;
@@ -344,13 +348,21 @@ body {
   color: #022a61;
   border: 1px solid #777;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .yourInfo__text {
   color: #022a61;
-  margin-top: 5%;
   width: 100%;
   font-size: 1.6em;
+}
+
+.yourInfo__requier {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.6rem;
+  color: red;
 }
 
 .form__section--plan {
@@ -661,8 +673,4 @@ body {
   .end {
     padding: 5% 0;
   }
-}
-
-.yourInfo {
-  display: block;
 }/*# sourceMappingURL=multiForm.css.map */
