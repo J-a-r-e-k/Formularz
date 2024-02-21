@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formularz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/multiForm.css" />
   </head>
   <body>
@@ -126,24 +133,24 @@
               Add-ons help enhance your gaming experience.
             </p>
             <section class="form__section">
-              <label class="addOns__pick addOns__pick--active">
-                <input type="checkbox" checked />
+              <div class="addOns__pick addOns__pick--active">
+                <i class="far fa-check-square"></i>
                 <div>
                   <h2 class="addOns__option">Online service</h2>
                   <p class="addOns__description">Access to multiplayer games</p>
                 </div>
                 <h3 class="addOns__price">+$1/mo</h3>
-              </label>
-              <label class="addOns__pick addOns__pick--active">
-                <input type="checkbox" checked />
+              </div>
+              <div class="addOns__pick addOns__pick--active">
+                <i class="far fa-check-square"></i>
                 <div>
                   <h2 class="addOns__option">Larger storage</h2>
                   <p class="addOns__description">Extra 1TB of cloud save</p>
                 </div>
                 <h3 class="addOns__price">+$2/mo</h3>
-              </label>
-              <label class="addOns__pick">
-                <input type="checkbox" />
+              </div>
+              <div class="addOns__pick">
+                <i class="far fa-square"></i>
                 <div>
                   <h2 class="addOns__option">Customizable Profile</h2>
                   <p class="addOns__description">
@@ -151,7 +158,7 @@
                   </p>
                 </div>
                 <h3 class="addOns__price">+$2/mo</h3>
-              </label>
+              </div>
             </section>
           </div>
           <div class="form__plate summary">
@@ -202,6 +209,7 @@
       </div>
     </div>
     <script src="form.js/plan.js"></script>
+    <script src="form.js/add-on.js"></script>
     <script src="form.js/form.js"></script>
   </body>
 </html>

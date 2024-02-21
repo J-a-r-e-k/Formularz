@@ -1,14 +1,13 @@
 const btnNext = document.querySelector('.form__btn--next');
 const btnBack = document.querySelector('.form__btn--back');
-const btnSubmin = document.querySelector('.form__btn--submin');
 const btnAll = document.querySelectorAll('.form__btn');
 const arrayPlate = document.querySelectorAll('.form__plate');
-const arrayNumber = document.querySelectorAll('.navigation__number');
+const arrayNumber = [...document.querySelectorAll('.navigation__number')];
 const inputValue = [...document.querySelectorAll('.form__section input')];
 const requier = [...document.querySelectorAll('.yourInfo__requier')];
 
 let numberStep = 0;
-
+// przełączanie STEPS form //
 const btn = () => {
   btnAll.forEach((e) => (e.style.display = 'none'));
   if (numberStep >= 0 && numberStep <= 3) {
@@ -22,14 +21,25 @@ const btn = () => {
   if (numberStep >= 1 && numberStep <= 3) {
     btnBack.style.display = 'block';
   }
+  // wyczyszczenie widoku. Wyświetlenie zgodnego z indeksem na który przełączono//
   arrayPlate.forEach((e) => (e.style.display = 'none'));
+
   arrayPlate[numberStep].style.display = 'block';
-  arrayNumber.forEach((e) => e.classList.remove('navigation--active'));
-  arrayNumber[numberStep].classList.add('navigation--active');
+  // arrayPlate[2].style.display = 'block';
+
+  // Sprawdza STEPS : wyświetlenie w panelu kroku/ lub wyłączenie go.
+  if (numberStep === 4) {
+    arrayNumber.forEach((i) => (i.parentElement.style.display = 'none'));
+  } else {
+    arrayNumber.forEach((e) => e.classList.remove('navigation--active'));
+    arrayNumber[numberStep].classList.add('navigation--active');
+  }
 };
 btn();
 const next = (e) => {
+  //wyłączenie odswiezania submit
   e.preventDefault();
+  // wyświetlenie niezgodności wpisu w formularz//
   requier.forEach((e) => (e.textContent = ''));
   inputValue.forEach((e, i) => {
     e.style.borderColor = '#777';
@@ -39,19 +49,22 @@ const next = (e) => {
     }
   });
 
-  const personInfo = inputValue.every((e) => e.value.trim() !== '');
-  if (!personInfo) {
-    return;
-  }
+  // Sprawdzenie i zatrzymanie funkcji gry rormularz jest pusty //
 
-  if (numberStep >= 0 && numberStep < 3) {
+  // const personInfo = inputValue.every((e) => e.value.trim() !== '');
+  // if (!personInfo) {
+  //   return;
+  // }
+
+  // Zwiekszanie Indeksu STEPS ++ //
+  if (numberStep >= 0 && numberStep < 4) {
     numberStep++;
   }
   btn();
 };
+// Zmniejszanie Indeksu STEPS -- //
 const back = (e) => {
   e.preventDefault();
-
   if (numberStep > 0 && numberStep <= 3) {
     numberStep--;
   }
