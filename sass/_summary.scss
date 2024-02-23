@@ -15,12 +15,13 @@
   position: relative;
   div {
     position: relative;
-    h2 {
-      font-size: 1.8rem;
-      line-height: 2rem;
-      color: #022a61;
-    }
   }
+}
+.success__Your-change {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #022a61;
+  font-weight: 600;
 }
 .summary__up--plan {
   border-bottom: 1px solid #999;
@@ -35,11 +36,11 @@
   color: #999;
   line-height: 3rem;
 }
-.summary__change {
+.summary__correct {
   text-decoration: underline;
   cursor: pointer;
 }
-.summary__change:hover {
+.summary__correct:hover {
   color: #5047fa;
 }
 

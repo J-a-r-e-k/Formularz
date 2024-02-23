@@ -51,8 +51,8 @@
       </div>
       <div class="form">
         <form action="">
-          <div class="form__plate yourInfo">
-            <h1 class="form__title">Personal info</h1>
+          <section class="form__plate yourInfo">
+            <h2 class="form__title">Personal info</h2>
             <p class="form__info">
               Please provide your name, email address, and phone number.
             </p>
@@ -88,9 +88,9 @@
                 />
               </div>
             </section>
-          </div>
-          <div class="form__plate selectPlate">
-            <h1 class="form__title">Select your plan</h1>
+          </section>
+          <section class="form__plate selectPlate">
+            <h2 class="form__title">Select your plan</h2>
             <p class="form__info">
               You have the option of monthly or yearly billing.
             </p>
@@ -98,37 +98,43 @@
               <div class="selectPlate__plan selectPlate__active">
                 <!-- <input type="radio" name="plan" value="arcade" checked /> -->
                 <img src="images/icon-arcade.svg" alt="planBasic" />
-                <span>
-                  <h2 class="form__plan">Arcade</h2>
-                  <p>$9/mo</p>
-                </span>
+                <div>
+                  <h3 class="form__plan">Arcade</h3>
+                  <p class="arrayPlan">
+                    $<span class="form_mony arrayPlan-mony">9</span>/mo
+                  </p>
+                </div>
               </div>
               <div class="selectPlate__plan">
                 <!-- <input type="radio" name="plan" value="Advanced" /> -->
                 <img src="images/icon-advanced.svg" alt="planBasic" />
-                <span>
-                  <h2 class="form__plan">Advanced</h2>
-                  <p>$12/mo</p></span
-                >
+                <div>
+                  <h3 class="form__plan">Advanced</h3>
+                  <p class="arrayPlan">
+                    $<span class="form_mony arrayPlan-mony">12</span>/mo
+                  </p>
+                </div>
               </div>
               <div class="selectPlate__plan">
                 <!-- <input type="radio" name="plan" value="pro" /> -->
                 <img src="images/icon-pro.svg" alt="planBasic" />
-                <span>
-                  <h2 class="form__plan">Pro</h2>
-                  <p>$15/mo</p></span
-                >
+                <div>
+                  <h3 class="form__plan">Pro</h3>
+                  <p class="arrayPlan">
+                    $<span class="form_mony arrayPlan-mony">15</span>/mo
+                  </p>
+                </div>
               </div>
 
-              <label class="selectPlate__toggle">
+              <div class="selectPlate__toggle">
                 <p class="toggle__option toggle__option--active">Monthly</p>
                 <span class="toggle__swich"></span>
                 <p class="toggle__option">Yeart</p>
-              </label>
+              </div>
             </section>
-          </div>
-          <div class="form__plate addOns">
-            <h1 class="form__title">Pick add-ons</h1>
+          </section>
+          <section class="form__plate addOns">
+            <h2 1class="form__title">Pick add-ons</h2>
             <p class="form__info">
               Add-ons help enhance your gaming experience.
             </p>
@@ -136,79 +142,89 @@
               <div class="addOns__pick addOns__pick--active">
                 <i class="far fa-check-square"></i>
                 <div>
-                  <h2 class="addOns__option">Online service</h2>
+                  <p class="addOns__option">Online service</p>
                   <p class="addOns__description">Access to multiplayer games</p>
                 </div>
-                <h3 class="addOns__price">+$1/mo</h3>
+                <p class="addOns__price">
+                  +$<span class="form_mony addOns-mony">1</span>/mo
+                </p>
               </div>
               <div class="addOns__pick addOns__pick--active">
                 <i class="far fa-check-square"></i>
                 <div>
-                  <h2 class="addOns__option">Larger storage</h2>
+                  <p class="addOns__option">Larger storage</p>
                   <p class="addOns__description">Extra 1TB of cloud save</p>
                 </div>
-                <h3 class="addOns__price">+$2/mo</h3>
+                <p class="addOns__price">
+                  +$<span class="form_mony addOns-mony">2</span>/mo
+                </p>
               </div>
               <div class="addOns__pick">
                 <i class="far fa-square"></i>
                 <div>
-                  <h2 class="addOns__option">Customizable Profile</h2>
+                  <p class="addOns__option">Customizable Profile</p>
                   <p class="addOns__description">
                     Custom theme on your profile
                   </p>
                 </div>
-                <h3 class="addOns__price">+$2/mo</h3>
+                <p class="addOns__price">
+                  +$<span class="form_mony addOns-mony">2</span>/mo
+                </p>
               </div>
             </section>
-          </div>
-          <div class="form__plate summary">
-            <h1 class="form__title">Finishing up</h1>
+          </section>
+          <section class="form__plate summary">
+            <h2 class="form__title">Finishing up</h2>
             <p class="form__info">
               Double-check everything looks OK before confirming.
             </p>
             <section class="form__section finishing">
-              <section class="summary__pick">
+              <div class="summary__pick">
                 <div class="summary__up summary__up--plan">
                   <div>
-                    <h2 class="">Arcade (<span>Monthly</span>)</h2>
-                    <p class="summary__description summary__change">Change</p>
+                    <p class="success__Your-change">
+                      Arcade (<span>Monthly</span>)
+                    </p>
+                    <p class="summary__description summary__correct">Change</p>
                   </div>
-                  <h3 class="summary__sum summary__sum--selectPlate">$9/mo</h3>
+                  <p class="summary__sum summary__sum--selectPlate">$9/mo</p>
                 </div>
                 <div class="summary__up">
                   <div>
                     <p class="summary__description">Online service</p>
-                    <h3 class="summary__sum">+$1/mo</h3>
+                    <p class="summary__sum">+$1/mo</p>
                   </div>
                   <div>
                     <p class="summary__description">Larger storage</p>
-                    <h3 class="summary__sum">+$2/mo</h3>
+                    <p class="summary__sum">+$2/mo</p>
                   </div>
                 </div>
-              </section>
+              </div>
 
               <div class="summary__up summary__up--total">
                 <p class="summary__description">Total(<span>per year</span>)</p>
-                <h3 class="summary__sum summary__sum--total">$12/mo</h3>
+                <p class="summary__sum summary__sum--total">$12/mo</p>
               </div>
             </section>
-          </div>
+          </section>
           <button class="form__btn form__btn--back">Go Back</button>
           <button class="form__btn form__btn--next">Next Step</button>
         </form>
 
-        <div class="end form__plate">
+        <section class="end form__plate">
           <img src="images/icon-thank-you.svg" alt="success" />
-          <h1 class="end__title">Thank you!</h1>
+          <h2 class="end__title">Thank you!</h2>
           <p class="end__info">
             Thanks for confirming your subscription! We hope you have fun using
             our platform. If you ever need support, please feel free to email us
             at support@loremgaming.com.
           </p>
-        </div>
+        </section>
       </div>
     </div>
+
     <script src="form.js/plan.js"></script>
+    <script src="form.js/array.js"></script>
     <script src="form.js/add-on.js"></script>
     <script src="form.js/form.js"></script>
   </body>

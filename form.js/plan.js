@@ -12,7 +12,7 @@ yourPlan.forEach((click) => {
 //Przełącznik monthly / yearly
 toggle.addEventListener('click', () => {
   toggle.classList.toggle('selectPlate__toggle--active');
-
+  array();
   toggle.childNodes[5].classList.toggle('toggle__option--active');
   toggle.childNodes[1].classList.toggle('toggle__option--active');
 });

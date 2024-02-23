@@ -25,7 +25,7 @@
       padding-right: 20px;
     }
   }
-  span {
+  div {
     position: absolute;
     left: 10%;
     bottom: 10%;
@@ -33,7 +33,7 @@
       position: static;
     }
 
-    h2 {
+    h3 {
       font-size: 1.6em;
       color: #022a61;
     }
@@ -121,3 +121,7 @@
 .toggle__option--active {
   color: #022a61;
 }
+
+// <p class="arrayPlan">
+// $<span class="arrayPlan-mony">15</span>/mo
+// </p>

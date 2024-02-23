@@ -408,21 +408,21 @@ body {
     padding-right: 20px;
   }
 }
-.selectPlate__plan span {
+.selectPlate__plan div {
   position: absolute;
   left: 10%;
   bottom: 10%;
 }
 @media (max-width: 850px) and (orientation: portrait) {
-  .selectPlate__plan span {
+  .selectPlate__plan div {
     position: static;
   }
 }
-.selectPlate__plan span h2 {
+.selectPlate__plan div h3 {
   font-size: 1.6em;
   color: #022a61;
 }
-.selectPlate__plan span p {
+.selectPlate__plan div p {
   font-size: 1.4em;
   color: #999;
   padding-top: 5px;
@@ -547,16 +547,20 @@ body {
   margin: 0 5%;
   width: 60%;
 }
-.addOns__pick div h2 {
+
+.addOns__option {
   font-size: 1.6em;
   color: #022a61;
+  font-weight: 600;
 }
-.addOns__pick div p {
+
+.addOns__description {
   padding: 2% 0;
   color: #999;
   font-size: 1.4em;
 }
-.addOns__pick h3 {
+
+.addOns__price {
   font-size: 1.6em;
   color: #6b68c6;
   font-weight: normal;
@@ -603,10 +607,12 @@ body {
 .summary__up div {
   position: relative;
 }
-.summary__up div h2 {
+
+.success__Your-change {
   font-size: 1.8rem;
   line-height: 2rem;
   color: #022a61;
+  font-weight: 600;
 }
 
 .summary__up--plan {
@@ -624,12 +630,12 @@ body {
   line-height: 3rem;
 }
 
-.summary__change {
+.summary__correct {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.summary__change:hover {
+.summary__correct:hover {
   color: #5047fa;
 }
 
