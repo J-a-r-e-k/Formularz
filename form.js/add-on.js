@@ -6,6 +6,7 @@ addOns.forEach((add) => {
   const index = addOns.indexOf(add);
   add.addEventListener('click', () => {
     add.classList.toggle('addOns__pick--active');
+    finishing();
 
     // Wymiana Ikony Check
     if (check[index].className === 'far fa-check-square') {

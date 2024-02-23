@@ -24,8 +24,9 @@ const btn = () => {
   // wyczyszczenie widoku. Wyświetlenie zgodnego z indeksem na który przełączono//
   arrayPlate.forEach((e) => (e.style.display = 'none'));
 
-  arrayPlate[numberStep].style.display = 'block';
-  // arrayPlate[1].style.display = 'block'; XX
+  // arrayPlate[numberStep].style.display = 'block';
+  arrayPlate[3].style.display = 'block';
+  // XX;
 
   // Sprawdza STEPS : wyświetlenie w panelu kroku/ lub wyłączenie go.
   if (numberStep === 4) {
@@ -51,10 +52,10 @@ const next = (e) => {
 
   //Sprawdzenie i zatrzymanie funkcji gdy formularz jest pusty //
   //!!//
-  const personInfo = inputValue.every((e) => e.value.trim() !== '');
-  if (!personInfo) {
-    return;
-  }
+  // const personInfo = inputValue.every((e) => e.value.trim() !== '');
+  // if (!personInfo) {
+  //   return;
+  // }
   //!!//
 
   // Zwiekszanie Indeksu STEPS ++ //
