@@ -14,5 +14,6 @@ addOns.forEach((add) => {
     } else {
       check[index].classList = 'far fa-check-square';
     }
+    array();
   });
 });

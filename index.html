@@ -101,7 +101,8 @@
                 <div>
                   <h3 class="form__plan">Arcade</h3>
                   <p class="arrayPlan">
-                    $<span class="form_mony arrayPlan-mony">9</span>/mo
+                    $<span class="form_mony arrayPlan-mony"></span
+                    ><span class="form_mony form__period"></span>
                   </p>
                 </div>
               </div>
@@ -111,7 +112,8 @@
                 <div>
                   <h3 class="form__plan">Advanced</h3>
                   <p class="arrayPlan">
-                    $<span class="form_mony arrayPlan-mony">12</span>/mo
+                    $<span class="form_mony arrayPlan-mony"></span
+                    ><span class="form_mony form__period"></span>
                   </p>
                 </div>
               </div>
@@ -121,7 +123,8 @@
                 <div>
                   <h3 class="form__plan">Pro</h3>
                   <p class="arrayPlan">
-                    $<span class="form_mony arrayPlan-mony">15</span>/mo
+                    $<span class="form_mony arrayPlan-mony"></span
+                    ><span class="form_mony form__period"></span>
                   </p>
                 </div>
               </div>
@@ -187,23 +190,19 @@
                     </p>
                     <p class="summary__description summary__correct">Change</p>
                   </div>
-                  <p class="summary__sum summary__sum--selectPlate">$9/mo</p>
+                  <p class="summary__sum summary__sum--selectPlate">
+                    $<span></span><span class="form_mony form__period"></span>
+                  </p>
                 </div>
-                <div class="summary__up summary__up--add">
-                  <div>
-                    <p class="summary__description">Online service</p>
-                    <p class="summary__sum">+$1/mo</p>
-                  </div>
-                  <div>
-                    <p class="summary__description">Larger storage</p>
-                    <p class="summary__sum">+$2/mo</p>
-                  </div>
-                </div>
+
+                <div class="summary__up summary__up--add"></div>
               </div>
 
               <div class="summary__up summary__up--total">
-                <p class="summary__description">Total(<span>per year</span>)</p>
-                <p class="summary__sum summary__sum--total">$12/mo</p>
+                <p class="summary__description">
+                  Total(per<span class="form_mony summary__sum--period"></span>)
+                </p>
+                <p class="summary__sum summary__sum--total"></p>
               </div>
             </section>
           </section>
@@ -228,6 +227,7 @@
     <script src="form.js/plan.js"></script>
     <script src="form.js/array.js"></script>
     <!-- <script src="form.js/add-on.js"></script> -->
+    <script src="form.js/finish.js"></script>
     <script src="form.js/form.js"></script>
   </body>
 </html>
