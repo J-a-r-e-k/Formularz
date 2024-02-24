@@ -1,11 +1,8 @@
-
-
-
-
 const sumPlan = document.querySelector('.success__Your-change');
 const sumPrice = document.querySelector('.summary__sum--selectPlate')
   .childNodes[1];
 const sumUp = document.querySelector('.summary__up--add');
+let indexClick = 0;
 
 const finishing = () => {
   const princePlan = planLengh[0].plan[indexClick]; // cena w wybranym planie

@@ -1,6 +1,6 @@
 const yourPlan = [...document.querySelectorAll('div.selectPlate__plan')];
 const toggle = document.querySelector('.selectPlate__toggle');
-let indexClick = 0;
+
 // Dodanie klasy wybrenemu elementowi.
 yourPlan.forEach((click) => {
   click.addEventListener(
