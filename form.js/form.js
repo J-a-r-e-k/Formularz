@@ -28,7 +28,7 @@ const btn = () => {
   arrayPlate.forEach((e) => (e.style.display = 'none'));
 
   arrayPlate[numberStep].style.display = 'block';
-  // arrayPlate[3].style.display = 'block';
+  // arrayPlate[0].style.display = 'block';
   // XX;
 
   // Sprawdza STEPS : wyświetlenie w panelu kroku/ lub wyłączenie go.
@@ -53,15 +53,39 @@ arrayStep.forEach((e) => {
 });
 
 const next = (e) => {
-  //wyłączenie odswiezania submit
+  //wyłączenie odświeżania submit
   e.preventDefault();
+  console.log(inputValue[0].value.trim());
+  console.log(inputValue[1].value);
+  console.log(inputValue[2].value);
+  const regName = /^[a-zA-Z]+(\s+[a-zA-z]+){1,3}?$/;
+  const regEmail =
+    /^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i;
+  const regNr = /^([+]\d{2})?[- ](\d{3})[- ]?(\d{3})[- ]?(\d{3})$/;
+  const testName = regName.test(inputValue[0].value.trim());
+  const testNR = regNr.test(inputValue[2].value.trim());
+  const testEmail = regEmail.test(inputValue[1].value.trim());
+
   // wyświetlenie niezgodności wpisu w formularz//
   requier.forEach((e) => (e.textContent = ''));
   inputValue.forEach((e, i) => {
     e.style.borderColor = '#777';
-    if (inputValue[i].value === '') {
+    if (inputValue[i].value.trim() === '') {
       requier[i].textContent = `Requires ${inputValue[i].name}`;
       inputValue[i].style.borderColor = 'red';
+    } else {
+      if (!testNR) {
+        requier[2].textContent = `Invalid format nrPhone`;
+        inputValue[2].style.borderColor = 'red';
+      }
+      if (!testEmail) {
+        requier[1].textContent = `Invalid format Email`;
+        inputValue[1].style.borderColor = 'red';
+      }
+      if (!testName) {
+        requier[0].textContent = `Invalid format Name`;
+        inputValue[0].style.borderColor = 'red';
+      }
     }
   });
 
