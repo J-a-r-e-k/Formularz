@@ -3,6 +3,8 @@ const monyInput = [
   [...document.querySelectorAll('.addOns-mony')],
 ];
 let nameSwitch;
+let totalPer;
+let totalPeriod;
 // Sprawdzenie wybranego plany rozliczenia i dodanie odpowiednich cen. //
 //Check the selected settlement plan and add the appropriate prices.//
 const array = () => {
@@ -18,10 +20,13 @@ const array = () => {
   const addPeriod = () => {
     const arrayPeriod = [...document.querySelectorAll('.form__period')];
     if (nameSwitch === true) {
-      arrayPeriod.forEach((e) => (e.textContent = '/yr'));
+      totalPer = '/yr';
+      totalPeriod = 'year';
     } else {
-      arrayPeriod.forEach((e) => (e.textContent = '/mo'));
+      totalPer = '/mo';
+      totalPeriod = 'month';
     }
+    arrayPeriod.forEach((e) => (e.textContent = totalPer));
   };
 
   addPeriod();

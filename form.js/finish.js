@@ -39,9 +39,9 @@ const finishing = () => {
   sumPrice.textContent = princePlan;
   document.querySelector(
     '.summary__sum--period'
-  ).textContent = ` ${longPlan.toLocaleLowerCase()}`;
+  ).textContent = ` ${totalPeriod}`;
   document.querySelector(
     '.summary__sum--total'
-  ).textContent = `$${totalPrice}/${longPlan.toLocaleLowerCase()}`;
+  ).textContent = `$${totalPrice}${totalPer}`;
 };
 finishing();
