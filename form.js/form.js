@@ -37,7 +37,9 @@ const btn = () => {
     arrayNumber.forEach((e) => e.classList.remove('navigation--active'));
     arrayNumber[numberStep].classList.add('navigation--active');
   }
-  arrayStep[indexStep].style.cursor = 'pointer'; // Dodanie "Pointer" na aktywne NR Postępu //
+  if (indexStep < 4) {
+    arrayStep[indexStep].style.cursor = 'pointer';
+  } // Dodanie "Pointer" na aktywne NR Postępu //
 };
 btn();
 // Sprawdzanie wypełnienia danych //
