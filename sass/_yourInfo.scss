@@ -17,9 +17,25 @@
 }
 .yourInfo__text {
   color: #022a61;
-
   width: 100%;
   font-size: 1.6em;
+}
+.yourInfo__clean {
+  display: none;
+  margin: 2% 5% 0 auto;
+  width: fit-content;
+  font-size: 1.4em;
+  color: #022a61;
+  cursor: pointer;
+  i {
+    font-size: 1em;
+  }
+  @media (max-width: 300px) and (orientation: portrait) {
+    margin: 5% 5% 0 auto;
+  }
+}
+.yourInfo__clean:hover {
+  color: red;
 }
 .yourInfo__requier {
   position: absolute;
@@ -27,4 +43,7 @@
   top: 0;
   font-size: 1.6rem;
   color: red;
+  @media (max-width: 300px) and (orientation: portrait) {
+    position: static;
+  }
 }

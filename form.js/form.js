@@ -1,5 +1,6 @@
 const btnNext = document.querySelector('.form__btn--next');
 const btnBack = document.querySelector('.form__btn--back');
+const btnClear = document.querySelector('.yourInfo__clean');
 const btnAll = document.querySelectorAll('.form__btn');
 const arrayPlate = document.querySelectorAll('.form__plate');
 const arrayStep = [...document.querySelectorAll('.navigation__step')];
@@ -28,8 +29,6 @@ const btn = () => {
   arrayPlate.forEach((e) => (e.style.display = 'none'));
 
   arrayPlate[numberStep].style.display = 'block';
-  // arrayPlate[0].style.display = 'block';
-  // XX;
 
   // Sprawdza STEPS : wyświetlenie w panelu kroku/ lub wyłączenie go.
   if (numberStep === 4) {
@@ -42,60 +41,49 @@ const btn = () => {
 };
 btn();
 
+const testImput = () => {
+  const testReg = [];
+  const regName =
+    /^[a-zA-Z][a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]*(\s+[a-zA-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]+){1,3}?$/;
+  const regEmail =
+    /^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i;
+  const regNr = /^([+]\d{2})?[- ]?(\d{3})[- ]?(\d{3})[- ]?(\d{3})$/;
+  testReg.push(regName.test(inputValue[0].value.trim()));
+  testReg.push(regEmail.test(inputValue[1].value.trim()));
+  testReg.push(regNr.test(inputValue[2].value.trim()));
+  const personInfo = testReg.every((e) => e === true); // sprawca czy wsztstkie testy ta prawdziwe
+  inputValue.forEach((e, i) => {
+    e.style.borderColor = '#777';
+    requier[i].textContent = '';
+    //włączenie przycisku czyszczacego pola tekstowe//
+    if (e.value !== '') {
+      btnClear.style.display = 'block';
+    }
+  });
+  if (!personInfo) {
+    for (i = 0; i < testReg.length; i++) {
+      if (testReg[i] === false) {
+        requier[i].textContent = `Requires ${inputValue[i].name}`;
+        inputValue[i].style.borderColor = 'red';
+      }
+    }
+    return;
+  }
+  btn();
+};
+
 // Kliknięcie Nr postępu przenosi do edytowania tego kroku o ile wcześniej został już wykonany//
 arrayStep.forEach((e) => {
   e.addEventListener('click', () => {
     if (indexStep >= arrayStep.indexOf(e)) {
       numberStep = arrayStep.indexOf(e);
     }
-    btn();
+    testImput();
+    // btn();
   });
 });
-
 const next = (e) => {
-  //wyłączenie odświeżania submit
   e.preventDefault();
-  console.log(inputValue[0].value.trim());
-  console.log(inputValue[1].value);
-  console.log(inputValue[2].value);
-  const regName = /^[a-zA-Z]+(\s+[a-zA-z]+){1,3}?$/;
-  const regEmail =
-    /^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i;
-  const regNr = /^([+]\d{2})?[- ](\d{3})[- ]?(\d{3})[- ]?(\d{3})$/;
-  const testName = regName.test(inputValue[0].value.trim());
-  const testNR = regNr.test(inputValue[2].value.trim());
-  const testEmail = regEmail.test(inputValue[1].value.trim());
-
-  // wyświetlenie niezgodności wpisu w formularz//
-  requier.forEach((e) => (e.textContent = ''));
-  inputValue.forEach((e, i) => {
-    e.style.borderColor = '#777';
-    if (inputValue[i].value.trim() === '') {
-      requier[i].textContent = `Requires ${inputValue[i].name}`;
-      inputValue[i].style.borderColor = 'red';
-    } else {
-      if (!testNR) {
-        requier[2].textContent = `Invalid format nrPhone`;
-        inputValue[2].style.borderColor = 'red';
-      }
-      if (!testEmail) {
-        requier[1].textContent = `Invalid format Email`;
-        inputValue[1].style.borderColor = 'red';
-      }
-      if (!testName) {
-        requier[0].textContent = `Invalid format Name`;
-        inputValue[0].style.borderColor = 'red';
-      }
-    }
-  });
-
-  //Sprawdzenie i zatrzymanie funkcji gdy formularz jest pusty //
-  //!!//
-  const personInfo = inputValue.every((e) => e.value.trim() !== '');
-  if (!personInfo) {
-    return;
-  }
-  //!!//
 
   // Zwiekszanie Indeksu STEPS ++ //
   if (numberStep >= 0 && numberStep < 4) {
@@ -105,7 +93,7 @@ const next = (e) => {
       indexStep++;
     }
   }
-  btn();
+  testImput();
 };
 // Zmniejszanie Indeksu STEPS -- //
 const back = (e) => {
@@ -118,6 +106,10 @@ const back = (e) => {
 
 btnNext.addEventListener('click', next);
 btnBack.addEventListener('click', back);
+btnClear.addEventListener('click', () => {
+  inputValue.forEach((e) => (e.value = ''));
+  btnClear.style.display = 'none';
+});
 summaryChange.addEventListener('click', () => {
   numberStep = 1;
   btn();
