@@ -1,3 +1,5 @@
+//Wypełnianie pól zmiennych z tablicy start //
+
 const monyInput = [
   [...document.querySelectorAll('.arrayPlan-mony')],
   [...document.querySelectorAll('.addOns-mony')],
@@ -16,7 +18,6 @@ const array = () => {
     nameSwitch = false;
   }
 
-  //
   const addPeriod = () => {
     const arrayPeriod = [...document.querySelectorAll('.form__period')];
     if (nameSwitch === true) {
@@ -30,7 +31,6 @@ const array = () => {
   };
 
   addPeriod();
-  //
 
   monyInput.forEach((e) => {
     // Określenie nr STEP i dodanie odpowiedniej tablicy do STEP
@@ -47,7 +47,6 @@ const array = () => {
       }
     });
   });
-  // finishing();
 };
 
 array();

@@ -11,7 +11,7 @@ const summaryChange = document.querySelector('.summary__correct');
 
 let numberStep = 0;
 let indexStep = 0;
-// przełączanie STEPS form //
+// Przełączanie STEPS form //
 const btn = () => {
   btnAll.forEach((e) => (e.style.display = 'none'));
   if (numberStep >= 0 && numberStep <= 3) {
@@ -40,7 +40,7 @@ const btn = () => {
   arrayStep[indexStep].style.cursor = 'pointer'; // Dodanie "Pointer" na aktywne NR Postępu //
 };
 btn();
-
+// Sprawdzanie wypełnienia danych //
 const testImput = () => {
   const testReg = [];
   const regName =
@@ -61,7 +61,11 @@ const testImput = () => {
     }
   });
   if (!personInfo) {
+    numberStep = 0;
+    indexStep = 0;
+
     for (i = 0; i < testReg.length; i++) {
+      arrayStep[i + 1].style.cursor = 'default';
       if (testReg[i] === false) {
         requier[i].textContent = `Requires ${inputValue[i].name}`;
         inputValue[i].style.borderColor = 'red';
